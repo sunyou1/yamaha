@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body {font-family: 'Gothic A1', sans-serif; font-size: 1.6rem; line-height: 1.5; color: #fff;}
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 1.6rem; line-height: 1.5; color: #fff;}
 
 #wrap {overflow-x: hidden;}
 
@@ -19,7 +19,7 @@ body {font-family: 'Gothic A1', sans-serif; font-size: 1.6rem; line-height: 1.5;
 
 #header .gnb {display: flex; }
 #header .gnb > li {position: relative;}
-#header .gnb > li > a {position:relative; z-index:100; transition: color .5s; display: block; color: #fff; text-align: center; font-weight: 600; width: 200px; line-height: 90px; position: relative;}
+#header .gnb > li > a {position:relative; z-index:100; transition: color .5s; display: block; color: #fff; text-align: center; font-weight: 500; width: 200px; line-height: 90px; position: relative;}
 
 #header .gnb .depth2 { position: absolute; z-index: 99; text-align: center; width: 100%;}
 #header .gnb .depth2::before {transition: all .1s; content: ''; width: 1px; background: #e4e4e4; position: absolute; top: -90px; right: 0; height: 300px;}
@@ -40,9 +40,9 @@ body {font-family: 'Gothic A1', sans-serif; font-size: 1.6rem; line-height: 1.5;
 #header .header_ui li .bi-person-fill {font-size: 20px;}
 
 
-#header:hover {background: #fff; color: #000;}
-#header:hover h1 {background:url(../img/common/logo-black.png) center center no-repeat;}
-#header:hover .gnb > li > a {color: #000;}
+#header:hover, .turn_on  {background: #fff; color: #000;}
+#header:hover h1, .turn_on h1 {background:url(../img/common/logo-black.png) center center no-repeat;}
+#header:hover .gnb > li > a, .turn_on .gnb > li > a {color: #000;}
 #header:hover .header_ui li .bi-search {-webkit-text-stroke: 1px #000}
 #header:hover .gnb > li:hover > a {color: #610C85; font-weight: 700;}
 

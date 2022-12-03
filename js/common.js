@@ -17,13 +17,18 @@ $(document).ready(function() {
 
     $(".bi-search").click(function () {
         $(".search_wrap").fadeToggle();
+        $(header).addClass('turn_on')
     });
 
     $(".search_close").click(function () {
         $(".search_wrap").fadeOut();
     });
 
-    
+    $(".bi-search").click(function () {
+        $(header).addClass('turn_on')
+    });
+
+
     //동영상 슬라이드
     const experience_items = new Swiper('.experience_items', {
         // 옵션
