@@ -12,7 +12,18 @@ $(document).ready(function() {
     });
 
 
+    //search
+    $(".search_wrap").hide();
 
+    $(".bi-search").click(function () {
+        $(".search_wrap").fadeToggle();
+    });
+
+    $(".search_close").click(function () {
+        $(".search_wrap").fadeOut();
+    });
+
+    
     //동영상 슬라이드
     const experience_items = new Swiper('.experience_items', {
         // 옵션

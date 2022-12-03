@@ -41,7 +41,7 @@ body {font-family: 'Gothic A1', sans-serif; font-size: 1.6rem; line-height: 1.5;
 
 #header:hover {background: #fff; color: #000;}
 #header:hover h1 {background:url(../img/common/logo-black.png) center center no-repeat;}
-#header:hover .gnb > li > a {color: #000;}
+#header:hover .gnb > li > a {color: #000; transition: all .3s; }
 #header:hover .header_ui li .bi-search {-webkit-text-stroke: 1px #000}
 #header:hover .gnb > li:hover > a {color: #610C85; font-weight: 700;}
 
@@ -51,7 +51,7 @@ body {font-family: 'Gothic A1', sans-serif; font-size: 1.6rem; line-height: 1.5;
 
 
 /* Sub_visual */
-.sub_visual {width: 100%; height: 700px; background: url('../img/sub/sub_visual.jpg') no-repeat center center; display: flex; justify-content: center; align-items: center;}
+.sub_visual {width: 100%; height: 700px; background: url('../img/sub/sub_visual.jpg') no-repeat center center; display: flex; justify-content: center; align-items: center; background-size: cover;}
 .sub_visual h2 { font-family: 'Oswald', sans-serif; font-size: 9rem; letter-spacing: 1.7rem; font-weight: 500; padding-top: 90px; text-shadow: 0 0 10px rgba(0, 0, 0, .5);}
 
 .snb_wrap {width: 100%; display: flex; justify-content: center; align-items: center; height: 80px;}
@@ -89,19 +89,57 @@ body {font-family: 'Gothic A1', sans-serif; font-size: 1.6rem; line-height: 1.5;
 
 /* cut */
 .cut {font-size: 10rem; font-weight: 700; position: relative; width: 100%; max-width: 100%; height: auto; padding: 70px 0; overflow: hidden; -webkit-text-stroke: 1px #999; color: rgba(0, 0, 0, 0);}
-.cut .cut_txt {width: 100%; position: absolute; top: 0; white-space: nowrap; will-change: transform; animation: rolling 20s linear infinite; display: flex;}
-.cut .cut_txt p {padding-right: 50%;}
+.cut .cut_txt {width: 100%; position: absolute; top: 0; white-space: nowrap; will-change: transform; animation: rolling 5s linear infinite; display: flex;}
+.cut .cut_txt p {min-width: 100%;}
 .cut .cut_txt p:hover {color: #aaa;}
 
 @keyframes rolling {
-    to {
-      transform: translateX(-180%);
-    }/* 대충 이위치에서 다시 시작하길래 맞춰놓음 */
-
-    from {
-      transform: translateX(100%);
-    }
+    100% {
+        transform: translateX(-100%);
+      }
   }
 
-/* concert - borrom */
-.concert_bottom {padding: 240px 0;}
+/* concert - bottom */
+.concert_bottom {padding: 240px 0 100px;}
+
+.concert_bottom .txt_wrap h4 {font-size: 5.4rem; letter-spacing: -2px; padding-bottom: 30px;}
+.concert_bottom .txt_wrap p {font-size: 2.4rem; color: #aaa; }
+
+/* spring */
+.spring {display: flex; flex-direction: row-reverse; align-items: center; width: 100%; }
+.spring .spring_img {width: 50%;}
+.spring .spring_img img {width: 100%;}
+.spring .spring_txt {width: 50%; text-align: right; padding-right: 50px; padding-bottom: 150px;}
+
+/* base */
+.base {display: flex; align-items: center; width: 100%; padding: 240px 0;}
+.base .base_img {width: 50%;}
+.base .base_img img {width: 100%;}
+.base .base_txt {width: 50%; text-align: left; padding-left: 50px;}
+
+/* outside */
+.outside {display: flex; justify-content: space-between; width: 100%; position: relative; padding-top: 130px;}
+.outside .first_img {width: 41.66666666666667%;}
+.outside .second_img {width: 37.5%; }
+.outside img {width: 100%;}
+
+.outside .outside_txt {position: absolute; top: 20px; left: 25%; text-align: center;}
+.outside .outside_txt p span {color: #fff; font-weight: 500;}
+
+
+/* moment */
+.moment {padding: 200px 0; text-align: center;}
+.moment h4 {font-size: 6.4rem; color: #555; padding-bottom: 60px;}
+.moment h4 span {color: #000;}
+
+.moment .moment_video {width: 1260px; display: inline-block;}
+.moment .moment_video iframe {width: 100%; height: 620px; border: 0;}
+.moment .moment_video p {font-weight: 600; font-size: 2rem; color: #393939; text-align: right; padding: 0; line-height: 1;}
+
+.moment p {padding: 90px 0 120px; line-height: 2; font-weight: 500; color: #6D6D6D; font-size: 2.4rem;}
+.moment p span {color: #000;}
+
+
+.moment .btn_list {display: flex; align-items: center; justify-content: center;}
+.moment .btn_list li {width: 320px; height: 90px; background: #B48B43; cursor: pointer; line-height: 90px; font-size: 3.0rem; font-weight: 700;}
+.moment .btn_list li:first-child {margin-right: 60px;}
