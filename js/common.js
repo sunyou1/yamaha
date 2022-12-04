@@ -17,23 +17,25 @@ $(document).ready(function() {
 
     $(".bi-search").click(function () {
         $(".search_wrap").fadeToggle();
-        $(header).addClass('turn_on')
+        if ( $(header).hasClass('turn_on') ) {
+            $(header).removeClass('turn_on')
+        } else {
+           $(header).addClass('turn_on')
+        }
     });
 
     $(".search_close").click(function () {
         $(".search_wrap").fadeOut();
+        $(header).removeClass('turn_on')
     });
 
-    $(".bi-search").click(function () {
-        $(header).addClass('turn_on')
-    });
 
 
     //동영상 슬라이드
     const experience_items = new Swiper('.experience_items', {
         // 옵션
-        slidesPerView: '2',  // 한 슬라이드에 보여줄 갯수
-        spaceBetween: 50,  // 슬라이드 사이 여백
+        slidesPerView: '1.5',  // 한 슬라이드에 보여줄 갯수
+        spaceBetween: 20,  // 슬라이드 사이 여백
         centeredSlides: true,  // 첫번째 슬라이드 가운데 배치
         pagination: {
             el: ".swiper-pagination",
